@@ -98,6 +98,10 @@ nav a:hover {
   background-color: #e2e2e2;
 }
 
+.visually-hidden{
+  visibility: hidden;
+}
+
 /* ===== Responsive Header/Nav =====*/
 
 @media (max-width: 1024px) {
