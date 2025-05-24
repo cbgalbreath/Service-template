@@ -83,19 +83,38 @@
       </svg> 
       Call Us
     </a>
-    <a href="mailto:Quality4less123@gmail.com" class="contact-btn secondary-btn">
+    <a href="#" class="contact-btn secondary-btn" id="toggle-email-form">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
       <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
       </svg> 
       Email Us
     </a>
   </div>
+  <form id="email-form" class="hidden-email-form" action="https://formsubmit.co/centerlanecomic@gmail.com" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit" class="contact-btn primary-btn">Send</button>
+</form>
   <p class="hours"><strong>Hours:</strong> Monday&mdash;Saturday, 5:00 AM&mdash;7:00 PM. Closed Sunday.</p>
 </section>
 
   <footer>
     <p>&copy; 2025 Chris Galbreath. All rights reserved.</p>
   </footer>
+  <script>
+  document.querySelector('.contact-btn.secondary-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+    const form = document.getElementById('email-form');
+    form.style.display = form.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
 </body>
 
 <script>
